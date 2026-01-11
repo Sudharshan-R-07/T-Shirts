@@ -1,5 +1,4 @@
 .env
 node_modules
-.cred
-.config
-servicekey.json
+cred/
+config/
