@@ -7,6 +7,7 @@ admin.initializeApp({
     privateKey: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, "\n"),
   }),
 });
+console.log("Firebase Connected")
 
 const db = admin.firestore();
 const auth = admin.auth();

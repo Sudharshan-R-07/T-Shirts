@@ -8,14 +8,14 @@ const Cart = () => {
   const navigate=useNavigate()
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/cart/USER123")
+    fetch("https://t-shirts-2.onrender.com/api/cart/USER123")
       .then(res => res.json())
       .then(data => setCart(data));
   }, []);
 
   const updateQty = async (cartId, action) => {
     const res = await fetch(
-      `http://localhost:5000/api/cart/update/${cartId}`,
+      `https://t-shirts-2.onrender.com/api/cart/update/${cartId}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
@@ -33,7 +33,7 @@ const Cart = () => {
       );
     }
   };
-   const localBackground="http://localhost:5000/api/payment"
+   const localBackground="https://t-shirts-2.onrender.com/api/payment"
 
  const handlebuy=async()=>{
     const {data} =await axios.post(`${localBackground}/orders`,{amount:totalAmount})
@@ -90,7 +90,7 @@ const Cart = () => {
   return (
     <div key={item._id} className="flex gap-4 items-center mb-6">
       <img
-        src={`http://localhost:5000${item.productId.image}`}
+        src={`https://t-shirts-2.onrender.com${item.productId.image}`}
         alt={item.productId.title}
         className="w-24"
       />

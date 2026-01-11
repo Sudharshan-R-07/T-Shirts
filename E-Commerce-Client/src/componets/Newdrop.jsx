@@ -6,13 +6,13 @@ const Newdrop = () => {
      const [products,setProducts]=useState([])
       const navigate = useNavigate();
     useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    fetch("https://t-shirts-2.onrender.com/api/products")
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => console.error(err));
   }, []);
   const addToCart = async (productId) => {
-  await fetch("http://localhost:5000/api/cart/add", {
+  await fetch("https://t-shirts-2.onrender.com/api/cart/add", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({

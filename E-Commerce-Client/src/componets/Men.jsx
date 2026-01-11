@@ -7,12 +7,7 @@ const Men = () => {
     const [search, setSearch] = useState("");
     const navigate = useNavigate();
      useEffect(() => {
-    fetch("http://localhost:5000/api/products")
-      .then(res => res.json())
-      .then(data => setProducts(data));
-  }, []);
-  useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    fetch("https://t-shirts-2.onrender.com/api/products")
       .then(res => res.json())
       .then(data => setProducts(data));
   }, []);
@@ -20,7 +15,7 @@ const Men = () => {
 
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/categories")
+        fetch("https://t-shirts-2.onrender.com/api/categories")
             .then(res => {
                 if (!res.ok) throw new Error("API error");
                 return res.json();
@@ -36,7 +31,7 @@ const Men = () => {
     }, []);
     if (loading) return <h2>Loading...</h2>;
     const addToCart = async (productId) => {
-        await fetch("http://localhost:5000/api/cart/add", {
+        await fetch("https://t-shirts-2.onrender.com/api/cart/add", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

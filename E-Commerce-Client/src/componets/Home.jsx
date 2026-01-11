@@ -24,7 +24,7 @@ const Home = () => {
     
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    fetch("https://t-shirts-2.onrender.com/api/products")
       .then(res => {
         if (!res.ok) throw new Error("API error");
         return res.json();
@@ -45,7 +45,7 @@ const Home = () => {
 
 
 const addToCart = async (productId) => {
-  await fetch("http://localhost:5000/api/cart/add", {
+  await fetch("https://t-shirts-2.onrender.com/api/cart/add", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
