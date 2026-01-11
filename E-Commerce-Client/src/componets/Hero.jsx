@@ -24,7 +24,7 @@ const Hero = () => {
                     <h1 className="text-6xl font-bold">25% OFF</h1>
                     <p className="font-bold">25% off sitewide using TEES25 at checkout</p>
                 </div>
-                <div className="absolute inset-0 bg-liner-to-t from-yellow-200/60 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-yellow-200/60 to-transparent"></div>
             </div>
             <div className={""}>
                 <h1 className="font-bold  text-4xl text-center underline">GET 10% OFF YOUR FIRST ORDER!</h1>
