@@ -19,24 +19,6 @@ router.post("/add", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-router.get("/", async (req, res) => {
-  const { search, size } = req.query;
-
-  let filter = {};
-
-  // SEARCH by title
-  if (search) {
-    filter.title = { $regex: search, $options: "i" };
-  }
-
-  // FILTER by size
-  if (size) {
-    filter.size = size;
-  }
-
-  const products = await Product.find(filter);
-  res.json(products);
-});
 
 
 module.exports = router;

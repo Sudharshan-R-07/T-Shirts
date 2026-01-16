@@ -38,7 +38,15 @@ const Home = () => {
         setLoading(false);
       });
   }, []);
-   if (loading) return <h2>Loading...</h2>;
+   if (loading) 
+    return(<>
+    <div class="flex items-center justify-center h-screen">
+  <div class="w-10 h-10 border-4 border-gray-300 border-t-black rounded-full animate-spin"></div>
+</div>
+
+    </>
+    )
+   
  
  
 
@@ -63,7 +71,7 @@ const addToCart = async (productId) => {
         <>
 
             <h1 className="text-3xl font-bold text-center">New Drops</h1>
-            <div ref={ref} className={`m-20 mt-10 grid grid-cols-4 gap-1 transition-all duration-700 ${show?"animate-fade-up":"opacity-0"} `}>
+            <div ref={ref} className={`m-20 mt-10  grid grid-cols-4 gap-1  transition-all duration-700 ${show?"animate-fade-up":"opacity-0"}  `}>
                 {products.map((data) => (
                     <div key={data._id} className="relative">
                         <img src={data.image} className=" h-80 hover:scale-105 hover:transition-transform duration-150"></img>

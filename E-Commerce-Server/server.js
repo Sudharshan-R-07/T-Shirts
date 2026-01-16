@@ -68,7 +68,7 @@ app.post("/api/payment/orders", (req, res) => {
         res.send(err)
     }
 })
-app.post("/api/payment/verify", (req, res) => {
+app.post("/api/payment/verify", (req,res) => {
     try {
         const { razorpay_payment_id, razorpay_order_id, razorpay_signature } = req.body
 

@@ -17,8 +17,8 @@ const Hero = () => {
     }, []);
     return (
         <>
-            <div ref={ref} className={`relative  bg-white shadow-2xl m-20 rounded-2xl  ${show ? "animate-fade-up" : "opacity-0"}`}>
-                <img src={img} className="h-162.5 mt-5 p-5"></img>
+            <div ref={ref} className={`relative  bg-white shadow-2xl m-20 rounded-2xl md:m-5 ${show ? "animate-fade-up" : "opacity-0"}`}>
+                <img src={img} className="h-162.5 mt-5 p-5 md:h-96 rounded"></img>
                 <div className={`text-center absolute top-1/2 right-1/6 `}>
                     <p className="font-bold ">Sales On!</p>
                     <h1 className="text-6xl font-bold">25% OFF</h1>

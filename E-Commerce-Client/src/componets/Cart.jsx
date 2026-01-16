@@ -103,17 +103,13 @@ const Cart = () => {
           <button
             onClick={() => updateQty(item._id, "dec")}
             className="px-3 py-1 bg-gray-300 rounded"
-          >
-            −
-          </button>
+          >−</button>
 
           <span className="font-semibold">{item.quantity}</span>
 
           <button
             onClick={() => updateQty(item._id, "inc")}
-            className="px-3 py-1 bg-gray-300 rounded"
-          >
-            +
+            className="px-3 py-1 bg-gray-300 rounded">+
           </button>
         </div>
       </div>
